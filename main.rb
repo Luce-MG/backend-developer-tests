@@ -3,16 +3,20 @@ require './random_player.rb'
 require './your_player.rb'
 require './helper.rb'
 
-srand(129)
+srand(1)
 
 grid_size = 5
 
 your_strategy = -> {
   game = Game.new(grid_size: grid_size)
 
-  you = YourPlayer.new(game: game, name: 'Unknown candidate')
+  you = YourPlayer.new(game: game, name: 'Agung Laksono')
+  team_friend1 = YourPlayer.new(game: game, name: 'Laksono One')
+  team_friend2 = YourPlayer.new(game: game, name: 'Laksono Two')
 
   game.add_player(you)
+  game.add_player(team_friend1)
+  game.add_player(team_friend2)
 
   game.start
 }

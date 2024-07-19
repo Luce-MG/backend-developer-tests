@@ -2,11 +2,12 @@ require './base_player.rb'
 
 class YourPlayer < BasePlayer
   def next_point(time:)
-    # Implement your strategy here.
-    {
-      row: 0,
-      col: 0
+    move = {
+      row: rand(0..grid.max_row),
+      col: rand(0..grid.max_col)
     }
+
+    move
   end
 
   def grid
